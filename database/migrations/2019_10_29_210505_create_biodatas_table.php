@@ -14,7 +14,13 @@ class CreateBiodatasTable extends Migration
     public function up()
     {
         Schema::create('biodatas', function (Blueprint $table) {
+<<<<<<< HEAD
             $table->bigIncrements('id');  
+=======
+            $table->bigIncrements('id');
+            $table->string("nombreEstudiante");
+            $table->string("direccEstudiante");
+>>>>>>> 9d1e881f2143dd49cb38483c8daa09d9a5946087
             $table->timestamps();
         });
     }
