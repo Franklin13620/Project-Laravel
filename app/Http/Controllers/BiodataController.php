@@ -25,7 +25,9 @@ class BiodataController extends Controller
      */
     public function create()
     {
-        //
+        //Modificando las funciones del controlador
+        return view('biodata.create');
+
     }
 
     /**
