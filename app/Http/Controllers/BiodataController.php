@@ -57,6 +57,8 @@ class BiodataController extends Controller
     public function show($id)
     {
         //
+      $biodata = Biodata::find($id);
+      return view('biodata,detail', compact('biodata'));
     }
 
     /**
@@ -68,6 +70,8 @@ class BiodataController extends Controller
     public function edit($id)
     {
         //
+        $biodata = Biodata::find($id);
+        return view('biodata.edit', compact('biodata'));
     }
 
     /**
