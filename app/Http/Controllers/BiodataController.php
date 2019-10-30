@@ -39,6 +39,13 @@ class BiodataController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+          'nombreEstudiante' => 'required'.
+          'direccEstudiante' => 'required'
+        ]);
+
+        Biodata::create($request->all());
+        return redirect()->route('biodata.index')->with('success', 'Nuevo registro creado con exito');
     }
 
     /**
