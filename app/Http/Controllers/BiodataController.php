@@ -58,7 +58,7 @@ class BiodataController extends Controller
     {
         //
       $biodata = Biodata::find($id);
-      return view('biodata,detail', compact('biodata'));
+      return view('biodata.detail', compact('biodata'));
     }
 
     /**
