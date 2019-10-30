@@ -14,6 +14,8 @@ class BiodataController extends Controller
     public function index()
     {
         //
+        $biodata = Biodata::latest()->paginate(5);
+        return view('biodata.index', compact('biodata'))->with('i', (request()->input('page',1) -1 )*5);
     }
 
     /**
